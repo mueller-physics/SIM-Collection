@@ -1,0 +1,149 @@
+
+% using UTF8 as encoding for all files
+\usepackage[utf8]{inputenc}
+
+% provides '\includegraphics'
+\usepackage{graphicx}
+
+% provides auto-convert eps to pdfs
+% \usepackage{epstopdf}
+
+% provides cells spanning multiple rows in tables
+\usepackage{multirow}
+
+% American math society, base + symbol package (mathbb and so forth..)
+\usepackage{amsmath,amssymb}
+
+% provides double-stroked numbers, for e.g. unit matrix symbol 1
+\usepackage{bbm}
+
+% provides support for automated unit typesetting (e.g. 200 GeV)
+\usepackage{units}
+
+% provides \toprule etc. for nicer tables
+\usepackage{booktabs}
+
+% provides side-figures with text flow around them
+\usepackage{wrapfig}
+
+% language support, last option is standard for document
+\usepackage[ngerman,english]{babel}
+
+% subimport support for using cascaded \input command (gnuplot epslatex)
+\usepackage{import}
+
+%\usepackage[normal]{caption}
+
+% change the (figure,etc.) counter, used for introduction
+\usepackage{chngcntr}
+
+
+% -----------------------------------------------------------
+% Set / select font
+% -----------------------------------------------------------
+
+% Set the font
+\usepackage[T1]{fontenc}
+
+% Latin modern, successor of computer modern with correct umlauts
+\usepackage{lmodern}	    
+
+
+
+% -----------------------------------------------------------
+% Somewhat more complex hyperlink setup 
+% -----------------------------------------------------------
+
+% provides extended colors, used here only for links
+\usepackage{xcolor}
+
+% link setup as suggested HERE: 
+% http://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
+\usepackage[pdfa,pdfencoding=auto,pdfusetitle
+]{hyperref}
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks, linkcolor={dark-red},
+    citecolor={dark-blue}, urlcolor={medium-blue},
+    linktocpage=true
+}
+
+%
+\setcapindent{1.5em}
+
+% -----------------------------------------------------------
+
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{ %
+  basicstyle=
+    {\ttfamily\footnotesize},     % the size of the fonts that are used for the code
+%  breakatwhitespace=true,          % sets if automatic breaks should only happen at whitespace
+%  breaklines=true,                 % sets automatic line breaking
+  commentstyle=\color{mygreen},    % comment style
+  frame=leftline,
+  xleftmargin=0.3em,
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C++,                    % the language of the code
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=true,           % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=4,                       % sets default tabsize to 2 spaces
+%  title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+  morekeywords=[8]{Spinor,PsiEntry,SU3,Gaugefield,Lattice,LSite,LSiteIter,CommunicationBase}
+}
+
+% shorthand to listings inline work
+\newcommand\cpp[1]{\lstinline{#1}}
+
+% provides the cref command, automaticly puts "figure, table" etc. in refs
+\usepackage{cleveref}
+
+
+% ============================================================================
+% Set a thick line for overfull boxes
+% ----------------------------------------------------------------------------
+
+\overfullrule=10pt
+
+
+% ============================================================================
+% list of new commands and shorthands
+% ----------------------------------------------------------------------------
+
+% The unit one 
+\newcommand{\unitone}{\mathbbm{1}}
+
+% The trace symbol
+\DeclareMathOperator{\trace}{Tr}
+
+% The "of order" O
+\DeclareMathOperator{\ofOrder}{O}
+
+% point-spread and optical transfer functions
+\DeclareMathOperator{\PSF}{PSF}
+\DeclareMathOperator{\OTF}{OTF}
+
+
+% A TODO marker, easily found in the document printout and source code
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO]}\textcolor{blue}{(#1)}}
+% A comment marker
+\newcommand{\cmnt}[1]{\textcolor{orange}{[?: #1]}}
+
+% see http://tex.stackexchange.com/questions/77816/hyperref-not-jumping-to-the-appropriate-location
+% sees to that the links point to the top of a figure, not its caption
+% do this here so it does not influence the epslatex plots
+% done by gnuplot
+\usepackage[all]{hypcap}
+
+

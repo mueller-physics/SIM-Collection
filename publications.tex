@@ -1,0 +1,169 @@
+\documentclass[twoside=false,
+           twocolumn=false,
+           a4paper,DIV=15,
+           10pt]{scrartcl}
+
+\input{header}
+
+\usepackage[sort,numbers]{natbib}
+\usepackage{bibentry}
+
+\newcommand{\cbibentry}[1]{\textcolor{blue}{\bibentry{#1}}}
+%\newcommand*{\doi}[1]{\href{http://dx.doi.org/\detokenize{#1}{\raggedright DOI: \detokenize{#1}}}}
+
+\nobibliography*
+% ========================================================================================
+% document defintions
+
+\author{\small{Marcel Müller}}
+\title{Overview on SR-SIM publications}
+\subtitle{A commented collection of SR-SIM publications,\\
+focussed on algorithms and some engineering.} 
+\date{\small \today}
+
+% ========================================================================================
+% The document itself
+
+\begin{document}
+
+\maketitle
+
+\abstract{
+This document contains a commented collection
+of publications with a focus on super-resolution structured
+illumination microscopy. This is mostly for me to keep
+track on where to find certain aspects written down
+and published, but might also be useful to others.
+
+The publications listed here will be on the technical side
+of things (construction of SR-SIM microscopes and reconstruction
+algorithms), looking at applications is (a) too much and (b)
+not really my field.
+}
+
+\tableofcontents
+\newpage
+
+\section{Fundamental papers}
+
+The \textit{standard} SR-SIM microscope and reconstruction algorithm,
+in use by all commercial systems and various home-built setups, 
+is often attributed to and referred to as \textbf{Gustaffson-Heintzmann}-SIM:
+
+\begin{itemize}
+\item Conference proceeding by R. Heintzmann (1999):\\
+\cbibentry{heintzmann1999laterally}
+\item 2D SIM by M. Gustaffson (2000):\\
+\cbibentry{gustafsson2000}
+\item 3D SIM by M. Gustaffson (2008):\\ 
+\cbibentry{gustafsson2008}
+\item There is also this PhD thesis (from 2000):\\
+\cbibentry{frohn2000super}
+\end{itemize}
+
+More precisely, Gustaffson-Heintzmann-SIM typically refers to
+sinusoidal SIM illumination pattern, which are amenable to a
+direct reconstruction approach. 
+% (see \cref{sec-novel} for more detail).
+
+\section{Building microscopes}
+
+There are a few papers with details on how groups created home-built
+SIM setups.
+
+\begin{itemize}
+\item Setup based on a Hamamatsu SLM (thus, non-binary phase control), 
+2-beam SIM, 4 pattern orientations ($0, 45, 90, 135$, easy pattern generation). I think
+this might be first SLM-based SIM paper (2009):\\
+\cbibentry{chang2009isotropic}
+\item Setup based on a TI DMD (thus binary), and using incoherent (LED) light:\\
+\cbibentry{dan2013dmd}
+\item Setup based on the Forth-DD ferro-electric SLM (binary, phase shift), device
+also in use by Betzig, setup very fast:\\
+\cbibentry{fastsim}
+\end{itemize}
+
+\section{Reconstruction / Algorithms}
+
+SIM reconstruction is usually a two-step process:
+\begin{itemize}
+\item Parameter estimation: Obtaining pattern orientation and frequency,
+obtaining (global and something pattern-individual) phase offsets
+\item Reconstruction: Band separation, shift and recombination through filters
+\end{itemize}
+The second part, the actual reconstruction, is rather straight-forward
+to implement and can be obtained e.g. directly from the formulas in \cite{gustafsson2008}.
+The first part, however, can in principle be done through different algorithms,
+with varying performance and sometimes hard-to-find documentation.
+
+\subsection{Parameter estimation}
+
+\begin{itemize}
+\item The SIM pattern causes a peak in the Fourier spectrum of a raw data frame under 
+structured illumination. That peak can in principle be used to obtain pattern orientation,
+frequency (position of the peak) and phase of the patter (complex phase of the peak):\\
+\cbibentry{shroff2009-phase}\\
+From the analysis in the paper and my experience,
+this method will work o.k. if the resolution enhancement is not too high, i.e. if the
+peak associated with the illumination pattern is not dampened too much by the OTF. As
+an advantage, it is easy to implement.
+
+\item \textbf{Approach by cross-correlation of separated bands}. The idea here is that the separated
+spectra have overlapping regions, so the correct shift (angle, 
+frequency, global phase, modulation depth) can
+be found by maximizing the cross-correlation of these bands in respect to a complex shift
+vector. The idea is already explained in one paragraph in \cite{gustafsson2008}, but not written
+down in detail. A quite detailed description can however be found in this review:\\
+\cbibentry{yang2015method}
+
+To my knowledge, this is the \textbf{method of choice} to obtain SIM reconstruction parameters,
+in use e.g. even for the current work of non-linear SIM. It is also the only method I know to
+obtain pattern frequency and angle, while the phases can be refined by further means.
+
+\item Iterative phase optimization: The cross-correlation will only yield one global phase,
+with phase differences between patterns assumed as fixed (and set in the band separation matrix).
+The iterative approach optimizes these phases by analyzing their shift through cross-correlation in
+the raw data:\\
+\cbibentry{wicker2013-phase1}
+
+It seems like a very sound approach, but it takes some time to implement correctly.
+
+\item Non-Iterative phase optimization: 
+A follow-up to the last paper, this performs phase optimization in a single step. The algorithm
+is easy to understand and implement, the paper provides comparisons to the iterative method
+(performance similar for realistic SNRs):\\
+\cbibentry{wicker2013-phase2}
+
+\end{itemize}
+
+\subsection{Filters}
+
+The last step of a SIM reconstruction is the recombination of frequency bands. Since
+the bands are OTF-corrected, a suitable filter needs to be applied. Typically, this is
+a modified/generalized Wiener-type filter.
+
+\begin{itemize}
+\item Optimization of modulation depth, spatially varying illumination intensity and such.
+A very early paper (2004), I'll also have to look into how well we could integrate some
+of these ideas into our software:\\
+\cbibentry{schaefer2004structured}
+
+\item For good cameras, photon counts are dominated by Poisson noise (photon count statistics)
+instead of Gaussian noise (electron read-out noise). Since the Wiener filter is not tuned to that,
+other filter approaches might yield better results.\\
+\cbibentry{chu2014image}
+
+
+\end{itemize}
+
+
+
+%\section{Other / novel approaches}
+%\label{sec-novel}
+
+
+\bibliography{literature}
+\bibliographystyle{unsrturl}
+
+\end{document}
+
