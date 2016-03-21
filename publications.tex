@@ -83,6 +83,10 @@ also in use by Betzig, setup very fast:\\
 \cbibentry{fastsim}
 \end{itemize}
 
+Also interesting: This paper has calculations (ray-tracing) on how
+the polarization of the interfering light influences pattern contrast:\\
+\cbibentry{o2012polarization}
+
 \section{Reconstruction / Algorithms}
 
 SIM reconstruction is usually a two-step process:
@@ -152,10 +156,65 @@ of these ideas into our software:\\
 instead of Gaussian noise (electron read-out noise). Since the Wiener filter is not tuned to that,
 other filter approaches might yield better results.\\
 \cbibentry{chu2014image}
-
-
 \end{itemize}
 
+\subsection{2D vs. 3D: Optical sectioning}
+
+SIM reconstructions can be done in either 2D (single
+slice, one focal plane) or 3D (requires z-stack and 3D OTF).
+Single slice reconstructions are independent of the
+illumination mode (2-beam or 3-beam interference), and
+even profit of 3-beam illumination for the following trick:
+
+To reduce the out-of-focus light, i.e. to introduce optical
+sectioning, the 2D OTF is re-weighted in such a way that
+SIM bands do not contribute around their missing cone. To use this
+trick, one either needs three-beam data (which has the medium band
+overlapping all missing cones) or two-beam data set to less
+than the maximum resolution improvement. The idea is mentioned
+in the appendix of \cite{wicker2013-phase1}, and documented in
+two more papers:\\
+\cbibentry{o2014optimized}\\
+and\\
+\cbibentry{shaw2015high}
+
+\section{Software}
+
+Software implementations of the SIM reconstruction algorithm that I am
+aware of:
+
+\begin{itemize}
+\item Of course \textbf{fairSIM}. Currently single-slice, with cross-correlation
+parameter estimation, handles two-beam and three-beam data (more bands work, but
+not through GUI), and offers optical sectioning.\\
+%\cbibentry{}
+\item Also, there is OpenSIM, a collection of Matlab functions to build
+and test SIM reconstructions:
+\cbibentry{lal2016structured}
+\item And another, bigger Matlab-based software, 
+where however "standard" SIM seems not
+to be the main focus:
+\cbibentry{kvrivzek2016simtoolbox}
+\end{itemize}
+
+As a side-note, the publications to cite when using
+ImageJ and Fiji:
+
+\begin{itemize}
+\item \cbibentry{schneider2012nih}
+\item \cbibentry{schindelin2012fiji}
+\end{itemize}
+
+And even more of a side-note, the localization software packages I sometimes
+want to cite:
+
+\begin{itemize}
+\item QuickPALM:\\ \cbibentry{henriques2010quickpalm}
+\item rapidSTORM:\\ \cbibentry{wolter2012rapidstorm}
+\item ThunderSTORM:\\ \cbibentry{ovesny2014thunderstorm}
+\item Comparison of localization microscopy software packages:\\
+\cbibentry{sage2015quantitative}
+\end{itemize}
 
 
 %\section{Other / novel approaches}
