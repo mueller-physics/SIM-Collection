@@ -187,15 +187,20 @@ aware of:
 \item Of course \textbf{fairSIM}. Currently single-slice, with cross-correlation
 parameter estimation, handles two-beam and three-beam data (more bands work, but
 not through GUI), and offers optical sectioning.\\
-%\cbibentry{}
+\cbibentry{mueller2016open}
 \item Also, there is OpenSIM, a collection of Matlab functions to build
-and test SIM reconstructions:
+and test SIM reconstructions:\\
 \cbibentry{lal2016structured}
 \item And another, bigger Matlab-based software, 
 where however "standard" SIM seems not
 to be the main focus:
 \cbibentry{kvrivzek2016simtoolbox}
 \end{itemize}
+
+Also important, the "SIMcheck" plugin. No reconstruction, but thorough
+analysis of the input data quality. Last time I've checked, mainly
+for 3D SIM:\\
+\cbibentry{ball2015simcheck}
 
 As a side-note, the publications to cite when using
 ImageJ and Fiji:
@@ -217,8 +222,26 @@ want to cite:
 \end{itemize}
 
 
-%\section{Other / novel approaches}
-%\label{sec-novel}
+\section{Non-linear SIM}
+
+This is probably not a complete list, but the milestone papers
+on extending SIM with "non-linear techniques" towards more than
+the $2\times$ resolution enhancement:
+
+\begin{itemize}
+\item
+Arguably among the first papers that promoted the idea:\\
+\cbibentry{heintzmann2002saturated}
+\item Work on non-linear SIM by Gustaffson
+Gustafsson \\
+\cbibentry{gustafsson2005nonlinear}\\
+and\\
+\cbibentry{rego2012nonlinear}
+\item Betzig's 2015 Science paper, SIM-everything:
+\cbibentry{li2015extended} 
+
+\end{itemize}
+
 
 
 \bibliography{literature}
