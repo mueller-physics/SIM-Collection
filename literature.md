@@ -15,10 +15,18 @@ The publications listed here are on the technical side
 of things, including
 * [Fundamental papers](#fundamentals)
 * [Building SIM microscopes](#building)
-* SIM reconstruction algorithms
-  * Parameter estimation
-  * Filtering approaches
-* Non-linear SIM
+* SIM [reconstruction algorithms](#reconstruction)
+  * [Parameter estimation](#parameter)
+  * [Noise filtering approaches](#filters)
+  * [Optical sectioning](#sectioning)
+  * [iterative / deconvolution / blind approaches](#blind)
+* Software packages
+  * [SIM reconstruction](#software-reconstruction)
+  * [Analysis and quality checks](#software-checks)
+  * [general image processing](#software-image-processing)
+  * [localization microscopy](#software-localization)
+
+* [Non-linear SIM](#non-linear-sim)
 
 I do not try to cover application of SIM to biological problems here, there are just too
 many papers out there that use SIM as a method for me to really keep track.
@@ -89,7 +97,7 @@ fering light influences pattern contrast:
 > Kevin O’Holleran and Michael Shaw. _Polarization effects on contrast in structured illumination
 > microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](http://dx.doi.org/10.1364/OL.37.004603)
 
-# Reconstruction / Algorithms
+# Reconstruction / Algorithms <a name="reconstruction">
 
 SIM reconstruction is usually a two-step process:
 1. _Parameter estimation_: Obtaining pattern orientation and frequency, obtaining (global and
@@ -99,7 +107,7 @@ through different algorithms, with varying performance and sometimes hard-to-fin
 2. _Reconstruction_: Band separation, shift and recombination through filters. This step is usually 
 rather straight-forward to implement.
 
-## Parameter estimation
+## Parameter estimation <a name="parameter">
 
 * The SIM pattern causes a peak in the Fourier spectrum of a raw data frame under structured
 illumination. That peak can in principle be used to obtain pattern orientation, frequency
@@ -129,17 +137,190 @@ down in detail. A quite detailed description can however be found in this review
 * Iterative phase optimization: The cross-correlation will only yield one global phase, with phase
 differences between patterns assumed as fixed (and set in the band separation matrix). The
 iterative approach optimizes these phases by analyzing their shift through cross-correlation in
-the raw data. It seems like a very sound approach, but it takes some time to implement correctly.
+the raw data. It seems like a very sound approach, but it probably takes some time to implement correctly.
 > Kai Wicker, Ondrej Mandula, Gerrit Best, Reto Fiolka, and Rainer Heintzmann. _Phase
 > optimisation for structured illumination microscopy._ Optics express, 21(2):2032–2049, 2013.
 > [doi:10.1364/OE.21.002032](http://dx.doi.org/10.1364/OE.21.002032)
 
-* Non-Iterative phase optimization: A follow-up to the last paper, this performs phase 
+* Non-Iterative phase optimization<a name="phase2013"/>: A follow-up to the last paper, this performs phase 
 optimization in a single step. The algorithm is easy to understand and implement, the paper
-provides comparisons to the iterative method (performance similar for realistic SNRs):
+provides comparisons to the iterative method (performance similar for realistic SNRs). 
+[fairSIM](http://www.fairsim.org) has some code to run this optimization, though it is currently
+not accessible directly through the GUI.
 > Kai Wicker. _Non-iterative determination of pattern phase in structured illumination 
 > microscopy using auto-correlations in fourier space._ Optics express, 21(21):24692–24701, 2013.
 > [doi:10.1364/OE.21.024692](http://dx.doi.org/10.1364/OE.21.024692)
 
+## Filters <a name="filters"/>
+
+The last step of a SIM reconstruction is the recombination of frequency bands. Since the bands
+are OTF-corrected, a suitable filter needs to be applied. Typically (i.e., in the original publications), 
+this is a modified/generalized Wiener-type filter, however other regularization methods can be applied.
+
+There is often some discussion about "linearity" of filters, i.e. if they can change relative intensities,
+which might be seen as a disadvantage of e.g. Richardson-Lucy-like iterative deconvolution methods.
 
 
+* Optimization of modulation depth, spatially varying illumination intensity and such. A very
+early paper (2004), I don't know if any if and where any of this has been implemented.
+> LH Schaefer, D Schuster, and J Schaffer. _Structured illumination microscopy: artefact analysis
+> and reduction utilizing a parameter optimization approach._ Journal of microscopy, 216(2):165–
+> 174, 2004. [doi:10.1111/j.0022-2720.2004.01411.x](http://dx.doi.org/10.1111/j.0022-2720.2004.01411.x)
+
+* For good cameras, photon counts are highly dominated by Poisson noise (photon count statistics)
+compared to Gaussian noise (electron read-out noise). Since the Wiener filter is not tuned to
+that, other filter approaches might yield better results. Again, I am not aware of any implementation
+of this in use.
+> Kaiqin Chu, Paul J McMillan, Zachary J Smith, Jie Yin, Jeniffer Atkins, Paul Goodwin, Sebastian 
+> Wachsmann-Hogiu, and Stephen Lane. _Image reconstruction for structured-illumination
+> microscopy with low signal level._ Optics express, 22(7):8687–8702, 2014. 
+> [doi:10.1364/OE.22.008687](http://dx.doi.org/10.1364/OE.22.008687)
+
+* Using [Richardson-Lucy](#richardson-lucy) for both sectioning and also filtering.
+
+# Optical sectioning (in single-slice / 2D SIM) <a name="sectioning" />
+
+SIM reconstructions can be done in either 2D (single slice, one focal plane) or 3D (requires z-stack
+and 3D OTF). Single slice reconstructions are independent of the illumination mode (2-beam or
+3-beam interference), and even profit of 3-beam illumination for the following trick:
+To reduce the out-of-focus light, i.e. to introduce optical sectioning, the 2D OTF is re-weighted
+in such a way that SIM bands do not contribute around their missing cone. To use this trick,
+one either needs three-beam data (which has the medium band overlapping all missing cones) or
+two-beam data set to less than the maximum resolution improvement. The idea is mentioned in
+the appendix of [the non-iterative phase optimization paper](#phase2013), and documented in two more papers:
+
+* The approach itself:
+> Kevin O’Holleran and Michael Shaw. _Optimized approaches for optical sectioning and resolution
+> enhancement in 2d structured illumination microscopy._ Biomedical optics express, 5(8):2580–2590,
+> 2014.
+> [doi:10.1364/BOE.5.002580](http://dx.doi.org/10.1364/BOE.5.002580)
+
+* Application to high-speed single-slice SIM:
+> Michael Shaw, Lydia Zajiczek, and Kevin O’Holleran. _High speed structured illumination 
+> microscopy in optically thick samples._ Methods, 88:11–19, 2015. 
+> [doi:10.1364/OL.37.004603](http://dx.doi.org/10.1364/OL.37.004603)
+
+Another more recent approach is to use Richardson-Lucy filtering on both the SIM raw input
+data, and as a replacement of the Wiener filtering step in the results. This allows for
+sectioning even without the OTF overlap, and in my experience yields very nice result
+as long as the SNR is good enough (i.e. it can remove out-of-focus background, but relies
+on data with good signal / low noise).
+
+* <a name="richardson-lucy" /> Using Richardson-Lucy filtering
+> Perez, Victor, Bo-Jui Chang, and Ernst Hans Karl Stelzer. 
+> _Optimal 2D-SIM reconstruction by two filtering steps with Richardson-Lucy deconvolution._
+>  Scientific reports 6, 37149, 2016. [doi:10.1038/srep37149](http://dx.doi.org/10.1038/srep37149)
+
+# Software
+
+## SIM image reconstruction <a name="software-reconstruction">
+
+* Of course [fairSIM](http://www.fairsim.org). Currently single-slice (3D is in progress), 
+with cross-correlation parameter estimation, handles two-beam and three-beam data 
+(more bands work, but not through GUI), and offers optical sectioning through both
+OTF attenuation and [RL-deconvolution](#richardson-lucy).
+> Marcel Müller, Viola Mönkemöller, Simon Hennig, Wolfgang Hübner, and Thomas Huser.
+> _Open-source image reconstruction of super-resolution structured illumination microscopy data
+> in ImageJ_. Nature Communications, 7, 2016 [doi:10.1038/ncomms10980](http://dx.doi.org/10.1038/ncomms10980).
+
+* Also, there is [OpenSIM](https://github.com/LanMai/OpenSIM), 
+a collection of Matlab functions to build and test SIM reconstructions:
+> Amit Lal, Chunyan Shan, and Peng Xi. _Structured illumination microscopy image reconstruction algorithm._
+> IEEE Journal of Selected Topics in Quantum Electronics, 22(4), 2016.
+> [doi:10.1109/JSTQE.2016.2521542](http://dx.doi.org/0.1109/JSTQE.2016.2521542)
+
+
+* And another, bigger Matlab-based software, where however the direct "stardard" SIM 
+reconstruction approach does not seem not to be their main focus: 
+> Pavel Křížek, Tomáš Lukeš, Martin Ovesnỳ, Karel Fliegel, and Guy M
+> Hagen. _Simtoolbox: a matlab toolbox for structured illumination fluorescence microscopy._
+> Bioinformatics, 32(2):318–320, 2016. 
+> [doi:10.1093/bioinformatics/btv576](http://dx.doi.org/10.1093/bioinformatics/btv576)
+
+
+## SIM analysis / quality checks <a name="software-checks" />
+
+* The "SIMcheck" plugin. Thorough analysis of the input data quality. Last time I’ve checked, mainly for 3D SIM:
+> Graeme Ball, Justin Demmerle, Rainer Kaufmann, Ilan Davis, Ian M Dobbie, and Lothar Schermelleh. 
+> _Simcheck: a toolbox for successful super-resolution structured illumination microscopy._
+> Scientific reports, 5, 2015. doi:10.1038/srep15915
+
+## General image processing for microscopy <a name="software-image-processing" /> 
+
+The publications to cite when using ImageJ and Fiji:
+
+* ImageJ:
+> Caroline A Schneider, Wayne S Rasband, and Kevin W Eliceiri. _NIH image to ImageJ: 25 years
+> of image analysis._ Nature methods, 9(7):671–675, 2012. 
+> [doi:10.1038/nmeth.2089](http://dx.doi.org/10.1038/nmeth.2089)
+
+* Fiji:
+> Johannes Schindelin, Ignacio Arganda-Carreras, Erwin Frise, Verena Kaynig, Mark Longair,
+> Tobias Pietzsch, Stephan Preibisch, Curtis Rueden, Stephan Saalfeld, Benjamin Schmid, et al.
+> _Fiji: an open-source platform for biological-image analysis._ Nature methods, 9(7):676–682, 2012. 
+> [doi:10.1038/nmeth.2019](http://dx.doi.org/10.1038/nmeth.2019)
+
+## Localization microscopy <a name="software-localization" />
+
+Not related to SIM, but included here for (my) convenience, popular papers around software
+packages for localization microscopy:
+
+* [QuickPALM](http://imagej.net/QuickPALM): 
+([github](https://github.com/fiji/QuickPALM/releases/tag/QuickPALM_-1.1.2) as part of FIJI)
+> Ricardo Henriques, Mickael Lelek, Eugenio F Fornasiero, Flavia Valtorta, Christophe Zimmer,
+> and Musa M Mhlanga. _Quickpalm: 3d real-time photoactivation nanoscopy image processing
+> in ImageJ._ Nature methods, 7(5):339–340, 2010. 
+> [doi:10.1038/nmeth0510-339](http://dx.doi.org/10.1038/nmeth0510-339)
+
+* [rapidSTORM](http://www.super-resolution.biozentrum.uni-wuerzburg.de/archiv/rapidstorm/) 
+([github](https://github.com/stevewolter/rapidSTORM) by maintainer / first author):
+> Steve Wolter, Anna Löschberger, Thorge Holm, Sarah Aufmkolk, Marie-Christine Dabauvalle,
+> Sebastian van de Linde, and Markus Sauer. _RapidSTORM: accurate, fast open-source software for
+> localization microscopy._ Nature methods, 9(11):1040–1041, 2012. 
+> [doi:10.1038/nmeth.2224](http://dx.doi.org/10.1038/nmeth.2224)
+
+* [ThunderSTORM](http://zitmen.github.io/thunderstorm/):
+> Martin Ovesnỳ, Pavel Křížek, Josef Borkovec, Zdeněk Švindrych, and Guy M Hagen. 
+> _Thunderstorm: a comprehensive ImageJ plug-in for PALM and STORM data analysis and super-resolution
+> imaging._ Bioinformatics, 30(16):2389–2390, 2014. 
+> [doi:10.1093/bioinformatics/btu202](http://dx.doi.org/10.1093/bioinformatics/btu202)
+
+* Comparison of localization microscopy software packages (with a [comprehensive list](http://bigwww.epfl.ch/smlm/software/)):
+> Daniel Sage, Hagai Kirshner, Thomas Pengo, Nico Stuurman, Junhong Min, Suliana Manley,
+> and Michael Unser. _Quantitative evaluation of software packages for single-molecule 
+> localization microscopy._ Nature methods, 2015. 
+> [doi:10.1038/nmeth.3442](http://dx.doi.org/10.1038/nmeth.3442)
+
+
+# Non-linear SIM <a name="non-linear-sim" />
+
+This is not a very complete list, but the milestone papers on extending SIM with "non-linear
+techniques" towards more than the 2× resolution enhancement:
+
+* Arguably among the first papers that promoted the idea
+> Rainer Heintzmann, Thomas M Jovin, and Christoph Cremer. _Saturated patterned excitation
+> microscopy—a concept for optical resolution improvement._ JOSA A, 19(8):1599–1609, 2002.
+> [doi:10.1364/JOSAA.19.001599](http://dx.doi.org/10.1364/JOSAA.19.001599)
+
+* Early work on non-linear SIM by Gustaffson 
+> Mats GL Gustafsson. Nonlinear structured-illumination microscopy: wide-field fluorescence
+> imaging with theoretically unlimited resolution. Proceedings of the National Academy of
+> Sciences of the United States of America, 102(37):13081–13086, 2005. 
+> [doi:10.1073/pnas.0406877102](http://dx.doi.org/10.1073/pnas.0406877102)
+
+* One of the main papers on non-linear by Gustaffson
+> E Hesper Rego, Lin Shao, John J Macklin, Lukman Winoto, Göran A Johansson, Nicholas
+> Kamps-Hughes, Michael W Davidson, and Mats GL Gustafsson. _Nonlinear structured-illumination
+> microscopy with a photoswitchable protein reveals cellular structures at 50-nm resolution._
+> Proceedings of the National Academy of Sciences, 109(3):E135–E143, 2012.
+> [doi:10.1073/pnas.1107547108](http://dx.doi.org/10.1073/pnas.1107547108)
+
+* Betzig’s 2015 big (see length of supplementals) Science paper on non-linear SIM: 
+> Dong Li, Lin Shao, Bi-Chang Chen, Xi Zhang,
+> Mingshu Zhang, Brian Moses, Daniel E Milkie, Jordan R Beach, John A Hammer, Mithun
+> Pasham, et al. _Extended-resolution structured illumination imaging of endocytic and cy-
+> toskeletal dynamics._ Science, 349(6251):aab3500, 2015.
+> [doi:10.1126/science.aab3500](http://dx.doi.org/10.1126/science.aab3500)
+
+
+  
