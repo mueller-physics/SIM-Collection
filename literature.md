@@ -13,19 +13,19 @@ to find certain aspects written down and published, but might also be useful to 
 
 The publications listed here are on the technical side
 of things, including
+
 * [Fundamental papers](#fundamentals)
+* [Reviews, Overviews, Protocols](#sim-reviews)
 * [Building SIM microscopes](#building)
-* SIM [reconstruction algorithms](#reconstruction)
+* _direct/classic_ SIM [reconstruction algorithms](#reconstruction)
   * [Parameter estimation](#parameter)
   * [Noise filtering approaches](#filters)
   * [Optical sectioning](#sectioning)
-  * [iterative / deconvolution / blind approaches](#blind)
 * Software packages
   * [SIM reconstruction](#software-reconstruction)
   * [Analysis and quality checks](#software-checks)
   * [general image processing](#software-image-processing)
   * [localization microscopy](#software-localization)
-
 * [Non-linear SIM](#non-linear-sim)
 
 I do not try to cover application of SIM to biological problems here, there are just too
@@ -67,6 +67,22 @@ is often attributed to and referred to as __Gustaffson-Heintzmann__-SIM:
 More precisely, Gustaffson-Heintzmann-SIM typically refers to sinusoidal SIM illumination pat-
 tern, which are amenable to a direct reconstruction approach.
 
+# Reviews and Overview <a name="sim-reviews">
+
+Certainly not a complete list, but the following are reviews, overview articles and protocols
+that might be helpful:
+
+* A practical guide on how to perform SIM measurements, and how to assess their quality, 
+from the Schermelleh lab. These guys have lots of experience with running OMX microscopes,
+taking calibration measurements (OTFs, etc.) and checking for / avoiding SIM artifacts.
+> Demmerle, Justin, Cassandravictoria Innocent, Alison J. North, Graeme Ball, 
+> Marcel Müller, Ezequiel Miron, Atsushi Matsuda, Ian M. Dobbie, Yolanda Markaki, 
+> and Lothar Schermelleh. _Strategic and practical guidelines for successful structured illumination microscopy._
+> Nat. Protoc, 2017. [doi:10.1038/nprot.2017.019](https://doi.org/10.1038/nprot.2017.019)
+
+
+
+
 # Building microscopes <a name="building" />
 
 There are a few papers with details on how groups created home-built SIM setups.
@@ -97,15 +113,24 @@ fering light influences pattern contrast:
 > Kevin O’Holleran and Michael Shaw. _Polarization effects on contrast in structured illumination
 > microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](http://dx.doi.org/10.1364/OL.37.004603)
 
-# Reconstruction / Algorithms <a name="reconstruction">
+# _direct_ reconstruction algorithms <a name="reconstruction">
 
-SIM reconstruction is usually a two-step process:
+This describes the _direct_ (now almost somewhat _classic_) reconstruction approach as introduces 
+by the Gustafsson-Heitzmann-papers, i.e.: The sample is illuminated with a finite number
+of overlapping sinusoidal intensity patterns, these become a finite number of delta-peaks
+in Fourier space, which in turn allows for a direct (non-iterative) solution to a set of
+linear equation. In contrast, newer algorithms use iterative solvers and what could be
+called deconvolution-like approaches to SIM, with different advantages and drawbacks over
+the classic methods.
+
+The direct SIM reconstruction is a multi-step process:
 1. _Parameter estimation_: Obtaining pattern orientation and frequency, obtaining (global and
 something pattern-individual) phase offsets. This can in principle be done
 through different algorithms, with varying performance and sometimes hard-to-find documentation.
 
-2. _Reconstruction_: Band separation, shift and recombination through filters. This step is usually 
-rather straight-forward to implement.
+2. _Reconstruction_: (2a) Band separation, shift and (2b) recombination through filters. This step is usually 
+rather straight-forward to implement, though the choice of filters (or _regularization_) can make a huge
+difference in image quality.
 
 ## Parameter estimation <a name="parameter">
 
