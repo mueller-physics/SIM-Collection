@@ -17,6 +17,8 @@ of things, including
 * [Fundamental papers](#fundamentals)
 * [Reviews, Overviews, Protocols](#sim-reviews)
 * [Building SIM microscopes](#building)
+  * [Multifocal: diffractive](#building-multifocal-diffractive)
+  * [Multifocal: diffractive](#building-multifocal-pathlength)
 * _direct/classic_ SIM [reconstruction algorithms](#reconstruction)
   * [Parameter estimation](#parameter)
   * [Noise filtering approaches](#filters)
@@ -37,7 +39,8 @@ If you think anything is missing, or my comments are wrong / off / incomplete,
 just let me know ([main page](../index.html) with contact info, or open an issue on github).
 
 I also try to maintain a [bibtex file](resources/literature.bib) up to date with this list,
-to make is easier to integrate citations.
+to make is easier to integrate citations. An [XML version](resources/literature_word.xml) compatible
+with WORD is automatically generated from it.
 
 # Fundamental papers <a name="fundamentals" />
 
@@ -49,23 +52,23 @@ is often attributed to and referred to as __Gustaffson-Heintzmann__-SIM:
 * Conference proceeding by __R. Heintzmann__ (1999)
 > Rainer Heintzmann and Christoph G Cremer. _Laterally modulated excitation microscopy:
 > improvement of resolution by using a diffraction grating._ In BiOS Europe’98, pages 185–196.
-> International Society for Optics and Photonics, 1999. [doi:10.1117/12.336833](http://dx.doi.org/10.1117/12.336833)
+> International Society for Optics and Photonics, 1999. [doi:10.1117/12.336833](https://doi.org/10.1117/12.336833)
 
 * 2D SIM by __M. Gustaffson__ (2000):
 > Mats GL Gustafsson. Surpassing the lateral resolution limit by a factor of two using struc-
 > tured illumination microscopy. Journal of microscopy, 198(2):82–87, 2000. 
-> [doi:10.1046/j.1365-2818.2000.00710.x](http://dx.doi.org/10.1046/j.1365-2818.2000.00710.x)
+> [doi:10.1046/j.1365-2818.2000.00710.x](https://doi.org/10.1046/j.1365-2818.2000.00710.x)
 
 * 3D SIM by __M. Gustaffson__ (2008):
 > Mats GL Gustafsson, Lin Shao, Peter M Carlton, CJ Rachel Wang, Inna N Golubovskaya,
 > W Zacheus Cande, David A Agard, and John W Sedat. _Three-dimensional resolution doubling 
 > in wide-field fluorescence microscopy by structured illumination._ Biophysical journal,
-> 94(12):4957–4970, 2008. [doi:10.1529/biophysj.107.120345](http://dx.doi.org/10.1529/biophysj.107.120345)
+> 94(12):4957–4970, 2008. [doi:10.1529/biophysj.107.120345](https://doi.org/10.1529/biophysj.107.120345)
 
 * There is also this __PhD thesis__ (2000):
 > Jan Tillman Frohn. _Super-resolution fluorescence microscopy by structured ligth illumination._
 > PhD thesis, Technische Wissenschaften ETH Zürich, 2000. Nr. 13916. 
-> [doi:10.3929/ethz-a-004064016](http://dx.doi.org/10.3929/ethz-a-004064016)
+> [doi:10.3929/ethz-a-004064016](https://doi.org/10.3929/ethz-a-004064016)
 
 More precisely, Gustaffson-Heintzmann-SIM typically refers to sinusoidal SIM illumination pat-
 tern, which are amenable to a direct reconstruction approach.
@@ -117,29 +120,35 @@ fering light influences pattern contrast:
 > microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](https://doi.org/10.1364/OL.37.004603)
 
 
-## Multi-focal approaches
+## Multi-focal approaches: Diffractive elements <a name="building-multifocal-diffractive">
 
-* SIM with multi-focal detection, first paper combining the two, by Sara Abrahamsson:
+* SIM with multi-focal detection, first paper combining the two, by Sara Abrahamssom. This was build
+by adding her multi-focal detection (a lithographed diffractive element, see papers below) with a Zeiss
+Elysa (commercial) SIM.
 > Abrahamsson, Sara, Hans Blom, Ana Agostinho, Daniel C. Jans, Aurelie Jost, Marcel Müller, Linnea Nilsson et al. 
 > _Multifocus structured illumination microscopy for fast volumetric super-resolution imaging._
 > Biomedical optics express 8, no. 9 (2017): 4135-4140. [doi:10.1364/BOE.8.004135](https://doi.org/10.1364/BOE.8.004135)
 
-* The technology was introduced here ...
+* I would assume this is where the idea of producing a phase mask to create a multi-focal detection system
+started, but I am not completely certain:
 > Abrahamsson, Sara, Satoru Usawa, and Mats Gustafsson. 
 > _A new approach to extended focus for high-speed high-resolution biological microscopy._
 >  In Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing XIII, vol. 6090, p. 60900N. 
 >  International Society for Optics and Photonics, 2006. [doi:10.1117/12.647022](https://doi.org/10.1117/12.647022)
 
-* ... published here ...
+* This is the main publication featuring the principle...
 > Abrahamsson, Sara, Jiji Chen, Bassam Hajj, Sjoerd Stallinga, Alexander Y. Katsov, Jan Wisniewski, 
 > Gaku Mizuguchi et al. _Fast multicolor 3D imaging using aberration-corrected multifocus microscopy._
 > Nature methods 10, no. 1 (2013): 60.  [doi:10.1038/nmeth.2277](https://doi.org/10.1038/nmeth.2277)
 
-* ... and thoroughly described here
+* ... and this paper has nice details on how the elements are actually created, and how to circumvent
+the problem of chromatic aberration
 > Abrahamsson, Sara, Rob Ilic, Jan Wisniewski, Brian Mehl, Liya Yu, Lei Chen, Marcelo Davanco et al. 
 > _Multifocus microscopy with precise color multi-phase diffractive optics applied in functional neuronal imaging._
 >  Biomedical optics express 7, no. 3 (2016): 855-869. [doi:10.1364/BOE.7.000855](https://doi.org/10.1364/BOE.7.000855)
 
+
+## Multi-focal approaches: Changing the detection path length <a name="building-multifocal-pathlength">
 
 * The 'beam splitter' approach, changing optical path length, here applied to SOFI...
 > Geissbuehler, Stefan, Azat Sharipov, Aurélien Godinat, Noelia L. Bocchio, Patrick A. Sandoz, Anja Huss, Nickels A. Jensen et al. 
@@ -182,7 +191,7 @@ enhancement is not too high, i.e. if the peak associated with the illumination p
 dampened too much by the OTF. As an advantage, it is easy to implement.
 > Sapna A Shroff, James R Fienup, and David R Williams. _Phase-shift estimation in sinusoidally
 > illuminated images for lateral superresolution_. JOSA A, 26(2):413–424, 2009. 
-> [doi:10.1364/JOSAA.26.000413](http://dx.doi.org/10.1364/JOSAA.26.000413)
+> [doi:10.1364/JOSAA.26.000413](https://doi.org/10.1364/JOSAA.26.000413)
 
 * Approach by cross-correlation of separated bands. The idea here is that the separated
 spectra have overlapping regions, so the correct shift (angle, frequency, global phase, modulation depth) 
@@ -196,7 +205,7 @@ down in detail. A quite detailed description can however be found in this review
 >   Qiang Yang, Liangcai Cao, Hua Zhang, Hao Zhang, and Guofan Jin. 
 >   _Method of lateral image reconstruction in structured illumination microscopy with super resolution._
 >   Journal of Innovative Optical Health Sciences, page 1630002, 2015. 
->   [doi:10.1142/S1793545816300020](http://dx.doi.org/10.1142/S1793545816300020)
+>   [doi:10.1142/S1793545816300020](https://doi.org/10.1142/S1793545816300020)
 
 
 * Iterative phase optimization: The cross-correlation will only yield one global phase, with phase
@@ -205,7 +214,7 @@ iterative approach optimizes these phases by analyzing their shift through cross
 the raw data. It seems like a very sound approach, but it probably takes some time to implement correctly.
 > Kai Wicker, Ondrej Mandula, Gerrit Best, Reto Fiolka, and Rainer Heintzmann. _Phase
 > optimisation for structured illumination microscopy._ Optics express, 21(2):2032–2049, 2013.
-> [doi:10.1364/OE.21.002032](http://dx.doi.org/10.1364/OE.21.002032)
+> [doi:10.1364/OE.21.002032](https://doi.org/10.1364/OE.21.002032)
 
 * Non-Iterative phase optimization<a name="phase2013"/>: A follow-up to the last paper, this performs phase 
 optimization in a single step. The algorithm is easy to understand and implement, the paper
@@ -214,7 +223,7 @@ provides comparisons to the iterative method (performance similar for realistic 
 not accessible directly through the GUI.
 > Kai Wicker. _Non-iterative determination of pattern phase in structured illumination 
 > microscopy using auto-correlations in fourier space._ Optics express, 21(21):24692–24701, 2013.
-> [doi:10.1364/OE.21.024692](http://dx.doi.org/10.1364/OE.21.024692)
+> [doi:10.1364/OE.21.024692](https://doi.org/10.1364/OE.21.024692)
 
 ## Filters <a name="filters"/>
 
@@ -230,7 +239,7 @@ which might be seen as a disadvantage of e.g. Richardson-Lucy-like iterative dec
 early paper (2004), I don't know if any if and where any of this has been implemented.
 > LH Schaefer, D Schuster, and J Schaffer. _Structured illumination microscopy: artefact analysis
 > and reduction utilizing a parameter optimization approach._ Journal of microscopy, 216(2):165–
-> 174, 2004. [doi:10.1111/j.0022-2720.2004.01411.x](http://dx.doi.org/10.1111/j.0022-2720.2004.01411.x)
+> 174, 2004. [doi:10.1111/j.0022-2720.2004.01411.x](https://doi.org/10.1111/j.0022-2720.2004.01411.x)
 
 * For good cameras, photon counts are highly dominated by Poisson noise (photon count statistics)
 compared to Gaussian noise (electron read-out noise). Since the Wiener filter is not tuned to
@@ -239,7 +248,7 @@ of this in use.
 > Kaiqin Chu, Paul J McMillan, Zachary J Smith, Jie Yin, Jeniffer Atkins, Paul Goodwin, Sebastian 
 > Wachsmann-Hogiu, and Stephen Lane. _Image reconstruction for structured-illumination
 > microscopy with low signal level._ Optics express, 22(7):8687–8702, 2014. 
-> [doi:10.1364/OE.22.008687](http://dx.doi.org/10.1364/OE.22.008687)
+> [doi:10.1364/OE.22.008687](https://doi.org/10.1364/OE.22.008687)
 
 * Using [Richardson-Lucy](#richardson-lucy) for both sectioning and also filtering.
 
@@ -258,12 +267,12 @@ the appendix of [the non-iterative phase optimization paper](#phase2013), and do
 > Kevin O’Holleran and Michael Shaw. _Optimized approaches for optical sectioning and resolution
 > enhancement in 2d structured illumination microscopy._ Biomedical optics express, 5(8):2580–2590,
 > 2014.
-> [doi:10.1364/BOE.5.002580](http://dx.doi.org/10.1364/BOE.5.002580)
+> [doi:10.1364/BOE.5.002580](https://doi.org/10.1364/BOE.5.002580)
 
 * Application to high-speed single-slice SIM:
 > Michael Shaw, Lydia Zajiczek, and Kevin O’Holleran. _High speed structured illumination 
 > microscopy in optically thick samples._ Methods, 88:11–19, 2015. 
-> [doi:10.1364/OL.37.004603](http://dx.doi.org/10.1364/OL.37.004603)
+> [doi:10.1364/OL.37.004603](https://doi.org/10.1364/OL.37.004603)
 
 Another more recent approach is to use Richardson-Lucy filtering on both the SIM raw input
 data, and as a replacement of the Wiener filtering step in the results. This allows for
@@ -274,7 +283,7 @@ on data with good signal / low noise).
 * <a name="richardson-lucy" /> Using Richardson-Lucy filtering
 > Perez, Victor, Bo-Jui Chang, and Ernst Hans Karl Stelzer. 
 > _Optimal 2D-SIM reconstruction by two filtering steps with Richardson-Lucy deconvolution._
->  Scientific reports 6, 37149, 2016. [doi:10.1038/srep37149](http://dx.doi.org/10.1038/srep37149)
+>  Scientific reports 6, 37149, 2016. [doi:10.1038/srep37149](https://doi.org/10.1038/srep37149)
 
 # Software
 
@@ -286,13 +295,13 @@ with cross-correlation parameter estimation, handles two-beam and three-beam dat
 OTF attenuation and [RL-deconvolution](#richardson-lucy).
 > Marcel Müller, Viola Mönkemöller, Simon Hennig, Wolfgang Hübner, and Thomas Huser.
 > _Open-source image reconstruction of super-resolution structured illumination microscopy data
-> in ImageJ_. Nature Communications, 7, 2016 [doi:10.1038/ncomms10980](http://dx.doi.org/10.1038/ncomms10980).
+> in ImageJ_. Nature Communications, 7, 2016 [doi:10.1038/ncomms10980](https://doi.org/10.1038/ncomms10980).
 
 * Also, there is [OpenSIM](https://github.com/LanMai/OpenSIM), 
 a collection of Matlab functions to build and test SIM reconstructions:
 > Amit Lal, Chunyan Shan, and Peng Xi. _Structured illumination microscopy image reconstruction algorithm._
 > IEEE Journal of Selected Topics in Quantum Electronics, 22(4), 2016.
-> [doi:10.1109/JSTQE.2016.2521542](http://dx.doi.org/0.1109/JSTQE.2016.2521542)
+> [doi:10.1109/JSTQE.2016.2521542](https://doi.org/0.1109/JSTQE.2016.2521542)
 
 
 * And another, bigger Matlab-based software, where however the direct "stardard" SIM 
@@ -300,7 +309,7 @@ reconstruction approach does not seem not to be their main focus:
 > Pavel Křížek, Tomáš Lukeš, Martin Ovesnỳ, Karel Fliegel, and Guy M
 > Hagen. _Simtoolbox: a matlab toolbox for structured illumination fluorescence microscopy._
 > Bioinformatics, 32(2):318–320, 2016. 
-> [doi:10.1093/bioinformatics/btv576](http://dx.doi.org/10.1093/bioinformatics/btv576)
+> [doi:10.1093/bioinformatics/btv576](https://doi.org/10.1093/bioinformatics/btv576)
 
 
 ## SIM analysis / quality checks <a name="software-checks" />
@@ -317,15 +326,26 @@ The publications to cite when using ImageJ and Fiji:
 * ImageJ:
 > Caroline A Schneider, Wayne S Rasband, and Kevin W Eliceiri. _NIH image to ImageJ: 25 years
 > of image analysis._ Nature methods, 9(7):671–675, 2012. 
-> [doi:10.1038/nmeth.2089](http://dx.doi.org/10.1038/nmeth.2089)
+> [doi:10.1038/nmeth.2089](https://doi.org/10.1038/nmeth.2089)
 
 * Fiji:
 > Johannes Schindelin, Ignacio Arganda-Carreras, Erwin Frise, Verena Kaynig, Mark Longair,
 > Tobias Pietzsch, Stephan Preibisch, Curtis Rueden, Stephan Saalfeld, Benjamin Schmid, et al.
 > _Fiji: an open-source platform for biological-image analysis._ Nature methods, 9(7):676–682, 2012. 
-> [doi:10.1038/nmeth.2019](http://dx.doi.org/10.1038/nmeth.2019)
+> [doi:10.1038/nmeth.2019](https://doi.org/10.1038/nmeth.2019)
 
-## Localization microscopy <a name="software-localization" />
+* MicroManager (2014)
+> Edelstein, Arthur D., Mark A. Tsuchida, Nenad Amodaj, Henry Pinkard, Ronald D. Vale, and Nico Stuurman. 
+> _Advanced methods of microscope control using μManager software._ Journal of biological methods 1, no. 2 (2014).
+> [doi:10.14440/jbm.2014.3](https://doi.org/10.14440/jbm.2014.36)
+
+* MicroManager (2010)
+> Edelstein, Arthur, Nenad Amodaj, Karl Hoover, Ron Vale, and Nico Stuurman. 
+> _Computer control of microscopes using µManager._
+> Current protocols in molecular biology (2010): 14-20.
+> [doi:10.1002/0471142727.mb1420s92](https://doi.org/10.1002/0471142727.mb1420s92)
+
+# microscopy <a name="software-localization" />
 
 Not related to SIM, but included here for (my) convenience, popular papers around software
 packages for localization microscopy:
@@ -335,26 +355,26 @@ packages for localization microscopy:
 > Ricardo Henriques, Mickael Lelek, Eugenio F Fornasiero, Flavia Valtorta, Christophe Zimmer,
 > and Musa M Mhlanga. _Quickpalm: 3d real-time photoactivation nanoscopy image processing
 > in ImageJ._ Nature methods, 7(5):339–340, 2010. 
-> [doi:10.1038/nmeth0510-339](http://dx.doi.org/10.1038/nmeth0510-339)
+> [doi:10.1038/nmeth0510-339](https://doi.org/10.1038/nmeth0510-339)
 
 * [rapidSTORM](http://www.super-resolution.biozentrum.uni-wuerzburg.de/archiv/rapidstorm/) 
 ([github](https://github.com/stevewolter/rapidSTORM) by maintainer / first author):
 > Steve Wolter, Anna Löschberger, Thorge Holm, Sarah Aufmkolk, Marie-Christine Dabauvalle,
 > Sebastian van de Linde, and Markus Sauer. _RapidSTORM: accurate, fast open-source software for
 > localization microscopy._ Nature methods, 9(11):1040–1041, 2012. 
-> [doi:10.1038/nmeth.2224](http://dx.doi.org/10.1038/nmeth.2224)
+> [doi:10.1038/nmeth.2224](https://doi.org/10.1038/nmeth.2224)
 
 * [ThunderSTORM](http://zitmen.github.io/thunderstorm/):
 > Martin Ovesnỳ, Pavel Křížek, Josef Borkovec, Zdeněk Švindrych, and Guy M Hagen. 
 > _Thunderstorm: a comprehensive ImageJ plug-in for PALM and STORM data analysis and super-resolution
 > imaging._ Bioinformatics, 30(16):2389–2390, 2014. 
-> [doi:10.1093/bioinformatics/btu202](http://dx.doi.org/10.1093/bioinformatics/btu202)
+> [doi:10.1093/bioinformatics/btu202](https://doi.org/10.1093/bioinformatics/btu202)
 
 * Comparison of localization microscopy software packages (with a [comprehensive list](http://bigwww.epfl.ch/smlm/software/)):
 > Daniel Sage, Hagai Kirshner, Thomas Pengo, Nico Stuurman, Junhong Min, Suliana Manley,
 > and Michael Unser. _Quantitative evaluation of software packages for single-molecule 
 > localization microscopy._ Nature methods, 2015. 
-> [doi:10.1038/nmeth.3442](http://dx.doi.org/10.1038/nmeth.3442)
+> [doi:10.1038/nmeth.3442](https://doi.org/10.1038/nmeth.3442)
 
 
 # Non-linear SIM <a name="non-linear-sim" />
@@ -365,27 +385,27 @@ techniques" towards more than the 2× resolution enhancement:
 * Arguably among the first papers that promoted the idea
 > Rainer Heintzmann, Thomas M Jovin, and Christoph Cremer. _Saturated patterned excitation
 > microscopy—a concept for optical resolution improvement._ JOSA A, 19(8):1599–1609, 2002.
-> [doi:10.1364/JOSAA.19.001599](http://dx.doi.org/10.1364/JOSAA.19.001599)
+> [doi:10.1364/JOSAA.19.001599](https://doi.org/10.1364/JOSAA.19.001599)
 
 * Early work on non-linear SIM by Gustaffson 
 > Mats GL Gustafsson. Nonlinear structured-illumination microscopy: wide-field fluorescence
 > imaging with theoretically unlimited resolution. Proceedings of the National Academy of
 > Sciences of the United States of America, 102(37):13081–13086, 2005. 
-> [doi:10.1073/pnas.0406877102](http://dx.doi.org/10.1073/pnas.0406877102)
+> [doi:10.1073/pnas.0406877102](https://doi.org/10.1073/pnas.0406877102)
 
 * One of the main papers on non-linear by Gustaffson
 > E Hesper Rego, Lin Shao, John J Macklin, Lukman Winoto, Göran A Johansson, Nicholas
 > Kamps-Hughes, Michael W Davidson, and Mats GL Gustafsson. _Nonlinear structured-illumination
 > microscopy with a photoswitchable protein reveals cellular structures at 50-nm resolution._
 > Proceedings of the National Academy of Sciences, 109(3):E135–E143, 2012.
-> [doi:10.1073/pnas.1107547108](http://dx.doi.org/10.1073/pnas.1107547108)
+> [doi:10.1073/pnas.1107547108](https://doi.org/10.1073/pnas.1107547108)
 
 * Betzig’s 2015 big (see length of supplementals) Science paper on non-linear SIM: 
 > Dong Li, Lin Shao, Bi-Chang Chen, Xi Zhang,
 > Mingshu Zhang, Brian Moses, Daniel E Milkie, Jordan R Beach, John A Hammer, Mithun
 > Pasham, et al. _Extended-resolution structured illumination imaging of endocytic and cy-
 > toskeletal dynamics._ Science, 349(6251):aab3500, 2015.
-> [doi:10.1126/science.aab3500](http://dx.doi.org/10.1126/science.aab3500)
+> [doi:10.1126/science.aab3500](https://doi.org/10.1126/science.aab3500)
 
 
   
