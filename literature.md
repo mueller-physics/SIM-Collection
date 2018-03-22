@@ -34,7 +34,10 @@ many papers out there that use SIM as a method for me to really keep track.
 
 I'll try to update the list on an as-needed basis, but I've failed before.
 If you think anything is missing, or my comments are wrong / off / incomplete, 
-just let me know ([main page](../index.html) with contact info, or open an issue on github). 
+just let me know ([main page](../index.html) with contact info, or open an issue on github).
+
+I also try to maintain a [bibtex file](resources/literature.bib) up to date with this list,
+to make is easier to integrate citations.
 
 # Fundamental papers <a name="fundamentals" />
 
