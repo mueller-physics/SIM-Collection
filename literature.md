@@ -95,26 +95,63 @@ orientations (0, 45, 90, 135, easy pattern generation). I think this might be fi
 SIM paper (2009):
 > Bo-Jui Chang, Li-Jun Chou, Yun-Ching Chang, and Su-Yu Chiang. _Isotropic image in structured 
 > illumination microscopy patterned with a spatial light modulator._ Optics express,
-> 17(17):14710–14721, 2009. [doi:10.1364/OE.17.014710](http://dx.doi.org/10.1364/OE.17.014710)
+> 17(17):14710–14721, 2009. [doi:10.1364/OE.17.014710](https://dx.doi.org/10.1364/OE.17.014710)
 
 * Setup based on a TI DMD (thus binary), and using incoherent (LED) light. Keep in mind that using
 incoherent light will not give a full 2x resolution improvement.
 > Dan Dan, Ming Lei, Baoli Yao, Wen Wang, Martin Winterhalder, Andreas Zumbusch, Yujiao
 > Qi, Liang Xia, Shaohui Yan, Yanlong Yang, et al. _DMD-based led-illumination super-resolution
 > and optical sectioning microscopy._ 
-> Scientific reports, 3, 2013. [doi:10.1038/srep01116](http://dx.doi.org/10.1038/srep01116)
+> Scientific reports, 3, 2013. [doi:10.1038/srep01116](https://dx.doi.org/10.1038/srep01116)
 
 * Setup based on the Forth-DD ferro-electric SLM (binary, phase shift), device also in use by
 Betzig, setup very fast:
 > Hui-Wen Lu-Walther, Martin Kielhorn, Ronny Förster, Aurélie Jost, Kai Wicker, and Rainer
 > Heintzmann. _fastsim: a practical implementation of fast structured illumination microscopy._
 > Methods and Applications in Fluorescence, 3(1):014001, 2015. 
-> [doi:10.1088/2050-6120/3/1/014001](http://dx.doi.org/10.1088/2050-6120/3/1/014001)
+> [doi:10.1088/2050-6120/3/1/014001](https://dx.doi.org/10.1088/2050-6120/3/1/014001)
 
 * Also interesting: This paper has calculations (ray-tracing) on how the polarization of the inter-
 fering light influences pattern contrast:
 > Kevin O’Holleran and Michael Shaw. _Polarization effects on contrast in structured illumination
-> microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](http://dx.doi.org/10.1364/OL.37.004603)
+> microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](https://doi.org/10.1364/OL.37.004603)
+
+
+## Multi-focal approaches
+
+* SIM with multi-focal detection, first paper combining the two, by Sara Abrahamsson:
+> Abrahamsson, Sara, Hans Blom, Ana Agostinho, Daniel C. Jans, Aurelie Jost, Marcel Müller, Linnea Nilsson et al. 
+> _Multifocus structured illumination microscopy for fast volumetric super-resolution imaging._
+> Biomedical optics express 8, no. 9 (2017): 4135-4140. [doi:10.1364/BOE.8.004135](https://doi.org/10.1364/BOE.8.004135)
+
+* The technology was introduced here ...
+> Abrahamsson, Sara, Satoru Usawa, and Mats Gustafsson. 
+> _A new approach to extended focus for high-speed high-resolution biological microscopy._
+>  In Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing XIII, vol. 6090, p. 60900N. 
+>  International Society for Optics and Photonics, 2006. [doi:10.1117/12.647022](https://doi.org/10.1117/12.647022)
+
+* ... published here ...
+> Abrahamsson, Sara, Jiji Chen, Bassam Hajj, Sjoerd Stallinga, Alexander Y. Katsov, Jan Wisniewski, 
+> Gaku Mizuguchi et al. _Fast multicolor 3D imaging using aberration-corrected multifocus microscopy._
+> Nature methods 10, no. 1 (2013): 60.  [doi:10.1038/nmeth.2277](https://doi.org/10.1038/nmeth.2277)
+
+* ... and thoroughly described here
+> Abrahamsson, Sara, Rob Ilic, Jan Wisniewski, Brian Mehl, Liya Yu, Lei Chen, Marcelo Davanco et al. 
+> _Multifocus microscopy with precise color multi-phase diffractive optics applied in functional neuronal imaging._
+>  Biomedical optics express 7, no. 3 (2016): 855-869. [doi:10.1364/BOE.7.000855](https://doi.org/10.1364/BOE.7.000855)
+
+
+* The 'beam splitter' approach, changing optical path length, here applied to SOFI...
+> Geissbuehler, Stefan, Azat Sharipov, Aurélien Godinat, Noelia L. Bocchio, Patrick A. Sandoz, Anja Huss, Nickels A. Jensen et al. 
+> _Live-cell multiplane three-dimensional super-resolution optical fluctuation imaging._
+>  Nature communications 5 (2014): 5830. [doi:10.1038/ncomms6830](https://doi.org/10.1038/ncomms6830)
+
+* ... which sparked the development of the prism-based realization of the same idea. The publication also
+merges it with quantitative phase imaging
+> Descloux, A., K. S. Grußmayer, E. Bostan, T. Lukes, A. Bouwens, A. Sharipov, S. Geissbuehler et al. 
+> _Combined multi-plane phase retrieval and super-resolution optical fluctuation imaging for 4D cell microscopy._
+>  Nature Photonics 12, no. 3 (2018): 165. [doi:10.1038/s41566-018-0109-4](https://doi.org/10.1038/s41566-018-0109-4)
+
 
 # _direct_ reconstruction algorithms <a name="reconstruction">
 
