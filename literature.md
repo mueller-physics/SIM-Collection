@@ -265,6 +265,16 @@ of this in use.
 
 * Using [Richardson-Lucy](#richardson-lucy) for both sectioning and also filtering.
 
+* A Hessian-based (2nd derivative) based regularization filter that offers an impressive
+cleanup of noise, as it promotes "smoothness" in the result. Especially useful in combination
+with video-imaging, as the smoothness criterion can also be used along the time axis.
+> Xiaoshuai Huang,  Junchao Fan, Liuju Li, Haosen Liu, Runlong Wu, Yi Wu,  Lisi Wei, Heng Mao,
+> Amit Lal, Peng Xi, Liqiang Tang, Yunfeng Zhang, Yanmei Liu, Shan Tan and Liangyi Chen.
+> _Fast, long-term, super-resolution imaging with Hessian structured illumination microscopy._
+> Nature Biotechnology, 2018.
+> [doi:10.1038/nbt.4115](https://doi.org/10.1038/nbt.4115)
+
+
 # Optical sectioning (in single-slice / 2D SIM) <a name="sectioning" />
 
 SIM reconstructions can be done in either 2D (single slice, one focal plane) or 3D (requires z-stack
