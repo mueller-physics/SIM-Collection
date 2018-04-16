@@ -368,7 +368,7 @@ The publications to cite when using ImageJ and Fiji:
 > Current protocols in molecular biology (2010): 14-20.
 > [doi:10.1002/0471142727.mb1420s92](https://doi.org/10.1002/0471142727.mb1420s92)
 
-# microscopy <a name="software-localization" />
+# Localization microscopy <a name="software-localization" />
 
 Not related to SIM, but included here for (my) convenience, popular papers around software
 packages for localization microscopy:
