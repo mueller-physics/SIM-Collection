@@ -114,6 +114,19 @@ Betzig, setup very fast:
 > Methods and Applications in Fluorescence, 3(1):014001, 2015. 
 > [doi:10.1088/2050-6120/3/1/014001](https://dx.doi.org/10.1088/2050-6120/3/1/014001)
 
+* Prequel(?) to the fastSIM, giving some more detail on the system
+> Ronny Förster, Hui-Wen Lu-Walther, Aurélie Jost, Martin Kielhorn, Kai Wicker, and Rainer Heintzmann. 
+> _Simple structured illumination microscope setup with high acquisition speed by using a spatial light modulator._
+> Optics Express 22, no. 17 (2014): 20663-20677.
+> [doi:10.1364/OE.22.020663](https://doi.org/10.1364/OE.22.020663)
+
+* Addition to the fastSIM paper, making it faster by working with the rolling shutter
+> Liyan Song, Hui-Wen Lu-Walther, Ronny Förster, Aurélie Jost, Martin Kielhorn, Jianying Zhou, and Rainer Heintzmann. 
+> _Fast structured illumination microscopy using rolling shutter cameras._
+> Measurement Science and Technology 27, no. 5 (2016): 055401.
+> [doi:10.1088/0957-0233/27/5/055401](https://doi.org/10.1088/0957-0233/27/5/055401)
+
+
 * Also interesting: This paper has calculations (ray-tracing) on how the polarization of the inter-
 fering light influences pattern contrast:
 > Kevin O’Holleran and Michael Shaw. _Polarization effects on contrast in structured illumination
