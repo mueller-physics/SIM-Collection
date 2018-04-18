@@ -132,6 +132,11 @@ fering light influences pattern contrast:
 > Kevin O’Holleran and Michael Shaw. _Polarization effects on contrast in structured illumination
 > microscopy._ Optics letters, 37(22):4603–4605, 2012. [doi:10.1364/OL.37.004603](https://doi.org/10.1364/OL.37.004603)
 
+* A video-guide on how to build / align a TIRF-SIM based on the
+ForthDD SLM, by the Kaminsky group:
+> Young, Laurence J., Florian Ströhl, and Clemens F. Kaminski. 
+> _A guide to structured illumination TIRF microscopy at high speed with multiple colors._
+>  Journal of visualized experiments: JoVE 111 (2016). [doi:10.3791/53988](https://dx.doi.org/10.3791/53988)
 
 ## Multi-focal approaches: Diffractive elements <a name="building-multifocal-diffractive">
 
@@ -367,6 +372,12 @@ The publications to cite when using ImageJ and Fiji:
 > _Computer control of microscopes using µManager._
 > Current protocols in molecular biology (2010): 14-20.
 > [doi:10.1002/0471142727.mb1420s92](https://doi.org/10.1002/0471142727.mb1420s92)
+
+* Citation StackReg / TurboReg are based on:
+> Thevenaz, Philippe, Urs E. Ruttimann, and Michael Unser. 
+> _A pyramid approach to subpixel registration based on intensity._
+> IEEE transactions on image processing 7, no. 1 (1998): 27-41. Harvard   
+> [doi:10.1109/83.650848](https://doi.org/10.1109/83.650848) 
 
 # Localization microscopy <a name="software-localization" />
 
