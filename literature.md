@@ -300,7 +300,7 @@ the appendix of [the non-iterative phase optimization paper](#phase2013), and do
 * Application to high-speed single-slice SIM:
 > Michael Shaw, Lydia Zajiczek, and Kevin O’Holleran. _High speed structured illumination 
 > microscopy in optically thick samples._ Methods, 88:11–19, 2015. 
-> [doi:10.1364/OL.37.004603](https://doi.org/10.1364/OL.37.004603)
+> [doi:10.1016/j.ymeth.2015.03.020](https://doi.org/10.1016/j.ymeth.2015.03.020)
 
 Another more recent approach is to use Richardson-Lucy filtering on both the SIM raw input
 data, and as a replacement of the Wiener filtering step in the results. This allows for
