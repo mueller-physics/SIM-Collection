@@ -11,7 +11,7 @@
     <![endif]-->
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
     {% for js in page.customjs %}
-    <script type="text/javascript" src="{{base.url | prepend: site.url }}/assets/js/{{ js }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/' | append: js | relative_url }}"></script>
     {% endfor %}
   </head>
 
@@ -19,10 +19,10 @@
    
     {% if page.bibtex.size > 0 %}
     <!-- bibtex-js and bibtex source file -->
-    <script type="text/javascript" src="{{base.url | prepend: site.url }}/assets/js/bibtex_js.js"></script>
+    <script type="text/javascript" src="{{ '/assets/js/bibtex_js.js' | relative_url }}"></script>
     
     {% for bt in page.bibtex %}
-    <bibtex src="{{base.url | prepend: site.url }}/resources/{{ bt }}"></bibtex>
+    <bibtex src="{{ '/resources/' | append: bt | relative_url }}"></bibtex>
     {% endfor %}
 
     <!-- bibtex style -->
