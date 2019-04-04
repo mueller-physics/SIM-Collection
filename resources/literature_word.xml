@@ -4,8 +4,9 @@
 <b:Tag>heintzmann1999laterally</b:Tag>
 <b:SourceType>ConferenceProceedings</b:SourceType>
 <b:Year>1999</b:Year>
-<b:ConferenceName>BiOS Europe&#8217;98</b:ConferenceName>
-<b:Pages>185-196</b:Pages>
+<b:ConferenceName>Optical Biopsies and Microscopic Techniques III</b:ConferenceName>
+<b:Volume>3568</b:Volume>
+<b:Pages>185-197</b:Pages>
 <b:Author>
 <b:Author><b:NameList>
 <b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
@@ -71,7 +72,7 @@
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Nature Publishing Group</b:Publisher>
 <b:Year>2017</b:Year>
-<b:JournalName>nature protocols</b:JournalName>
+<b:JournalName>Nature Protocols</b:JournalName>
 <b:Volume>12</b:Volume>
 <b:Issue>5</b:Issue>
 <b:Pages>988</b:Pages>
@@ -90,6 +91,23 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Strategic and practical guidelines for successful structured illumination microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>heintzmannhuser2017</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Amer Chemical Soc</b:Publisher>
+<b:Year>2017</b:Year>
+<b:JournalName>Chemical Reviews</b:JournalName>
+<b:Volume>177</b:Volume>
+<b:Issue>23</b:Issue>
+<b:Pages>13890-13908</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
+<b:Person><b:Last>Huser</b:Last><b:First>Thomas</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Super-Resolution Structured Illumination Microscopy</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>chang2009isotropic</b:Tag>
@@ -129,13 +147,15 @@
 <b:Person><b:Last>Xia</b:Last><b:First>Liang</b:First></b:Person>
 <b:Person><b:Last>Yan</b:Last><b:First>Shaohui</b:First></b:Person>
 <b:Person><b:Last>Yang</b:Last><b:First>Yanlong</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Gao</b:Last><b:First>Peng</b:First></b:Person>
+<b:Person><b:Last>Ye</b:Last><b:First>Tong</b:First></b:Person>
+<b:Person><b:Last>Zhao</b:Last><b:First>Wei</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>DMD-based LED-illumination Super-resolution and optical sectioning microscopy</b:Title>
 </b:Source>
 <b:Source>
-<b:Tag>fastsim</b:Tag>
+<b:Tag>walther2015fastsim</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>IOP Publishing</b:Publisher>
 <b:Year>2015</b:Year>
@@ -156,6 +176,49 @@
 <b:Title>fastSIM: a practical implementation of fast structured illumination microscopy</b:Title>
 </b:Source>
 <b:Source>
+<b:Tag>forster2014simple</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Optical Society of America</b:Publisher>
+<b:Year>2014</b:Year>
+<b:JournalName>Optics Express</b:JournalName>
+<b:Volume>22</b:Volume>
+<b:Issue>17</b:Issue>
+<b:Pages>20663-20677</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>F&#246;rster</b:Last><b:First>Ronny</b:First></b:Person>
+<b:Person><b:Last>Lu-Walther</b:Last><b:First>Hui-Wen</b:First></b:Person>
+<b:Person><b:Last>Jost</b:Last><b:First>Aur&#233;lie</b:First></b:Person>
+<b:Person><b:Last>Kielhorn</b:Last><b:First>Martin</b:First></b:Person>
+<b:Person><b:Last>Wicker</b:Last><b:First>Kai</b:First></b:Person>
+<b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Simple structured illumination microscope setup with high acquisition speed by using a spatial light modulator</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>song2016fast</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>IOP Publishing</b:Publisher>
+<b:Year>2016</b:Year>
+<b:JournalName>Measurement Science and Technology</b:JournalName>
+<b:Volume>27</b:Volume>
+<b:Issue>5</b:Issue>
+<b:Pages>055401</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Song</b:Last><b:First>Liyan</b:First></b:Person>
+<b:Person><b:Last>Lu-Walther</b:Last><b:First>Hui-Wen</b:First></b:Person>
+<b:Person><b:Last>F&#246;rster</b:Last><b:First>Ronny</b:First></b:Person>
+<b:Person><b:Last>Jost</b:Last><b:First>Aur&#233;lie</b:First></b:Person>
+<b:Person><b:Last>Kielhorn</b:Last><b:First>Martin</b:First></b:Person>
+<b:Person><b:Last>Zhou</b:Last><b:First>Jianying</b:First></b:Person>
+<b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Fast structured illumination microscopy using rolling shutter cameras</b:Title>
+</b:Source>
+<b:Source>
 <b:Tag>o2012polarization</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Optical Society of America</b:Publisher>
@@ -171,6 +234,22 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Polarization effects on contrast in structured illumination microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>young2016guide</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>MyJoVE Corporation</b:Publisher>
+<b:Year>2016</b:Year>
+<b:JournalName>Journal of visualized experiments: JoVE</b:JournalName>
+<b:Issue>111</b:Issue>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Young</b:Last><b:First>Laurence</b:First><b:Middle>J</b:Middle></b:Person>
+<b:Person><b:Last>Str&#246;hl</b:Last><b:First>Florian</b:First></b:Person>
+<b:Person><b:Last>Kaminski</b:Last><b:First>Clemens</b:First><b:Middle>F</b:Middle></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>A guide to structured illumination TIRF microscopy at high speed with multiple colors</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>abrahamsson2017multifocus</b:Tag>
@@ -193,7 +272,7 @@
 <b:Person><b:Last>Bernhem</b:Last><b:First>Kristoffer</b:First></b:Person>
 <b:Person><b:Last>Lambert</b:Last><b:First>Talley</b:First><b:Middle>J</b:Middle></b:Person>
 <b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Brismar</b:Last><b:First>Hjalmar</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Multifocus structured illumination microscopy for fast volumetric super-resolution imaging</b:Title>
@@ -236,7 +315,12 @@
 <b:Person><b:Last>Soule</b:Last><b:First>Pierre</b:First></b:Person>
 <b:Person><b:Last>Mueller</b:Last><b:First>Florian</b:First></b:Person>
 <b:Person><b:Last>Darzacq</b:Last><b:First>Claire</b:First><b:Middle>Dugast</b:Middle></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Darzacq</b:Last><b:First>Xavier</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Carl</b:First></b:Person>
+<b:Person><b:Last>Bargmann</b:Last><b:First>Cornelia</b:First><b:Middle>I</b:Middle></b:Person>
+<b:Person><b:Last>Agard</b:Last><b:First>David</b:First><b:Middle>A</b:Middle></b:Person>
+<b:Person><b:Last>Dahan</b:Last><b:First>Maxime</b:First></b:Person>
+<b:Person><b:Last>Gustafsson</b:Last><b:First>Mats</b:First><b:Middle>G</b:Middle><b:Middle>L</b:Middle></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Fast multicolor 3D imaging using aberration-corrected multifocus microscopy</b:Title>
@@ -262,7 +346,17 @@
 <b:Person><b:Last>Oudjedi</b:Last><b:First>Laura</b:First></b:Person>
 <b:Person><b:Last>Fiche</b:Last><b:First>Jean-Bernard</b:First></b:Person>
 <b:Person><b:Last>Hajj</b:Last><b:First>Bassam</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Jin</b:Last><b:First>Xin</b:First></b:Person>
+<b:Person><b:Last>Pulupa</b:Last><b:First>Joan</b:First><b:Middle>Cho</b:Middle><b:Middle>Christine</b:Middle></b:Person>
+<b:Person><b:Last>Mir</b:Last><b:First>Mustafa</b:First></b:Person>
+<b:Person><b:Last>Beheiry</b:Last><b:First>Mohamed</b:First><b:Middle>El</b:Middle></b:Person>
+<b:Person><b:Last>Darzacq</b:Last><b:First>Xavier</b:First></b:Person>
+<b:Person><b:Last>Nollmann</b:Last><b:First>Marcelo</b:First></b:Person>
+<b:Person><b:Last>Dahan</b:Last><b:First>Maxime</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Carl</b:First></b:Person>
+<b:Person><b:Last>Lionnet</b:Last><b:First>Timoth&#195;&#169;e</b:First></b:Person>
+<b:Person><b:Last>Liddle</b:Last><b:First>J</b:First><b:Middle>Alexander</b:Middle></b:Person>
+<b:Person><b:Last>Bargmann</b:Last><b:First>Cornelia</b:First><b:Middle>I</b:Middle></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Multifocus microscopy with precise color multi-phase diffractive optics applied in functional neuronal imaging</b:Title>
@@ -287,10 +381,35 @@
 <b:Person><b:Last>Jakobs</b:Last><b:First>Stefan</b:First></b:Person>
 <b:Person><b:Last>Enderlein</b:Last><b:First>J&#246;rg</b:First></b:Person>
 <b:Person><b:Last>Van Der Goot</b:Last><b:First>F</b:First><b:Middle>Gisou</b:Middle></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Dubikovskaya</b:Last><b:First>Elena</b:First><b:Middle>A</b:Middle></b:Person>
+<b:Person><b:Last>Lasser</b:Last><b:First>Theo</b:First></b:Person>
+<b:Person><b:Last>Leutenegger</b:Last><b:First>Marcel</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Live-cell multiplane three-dimensional super-resolution optical fluctuation imaging</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>juette2008three</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Nature Publishing Group</b:Publisher>
+<b:Year>2008</b:Year>
+<b:JournalName>Nature methods</b:JournalName>
+<b:Volume>5</b:Volume>
+<b:Issue>6</b:Issue>
+<b:Pages>527</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Juette</b:Last><b:First>Manuel</b:First><b:Middle>F</b:Middle></b:Person>
+<b:Person><b:Last>Gould</b:Last><b:First>Travis</b:First><b:Middle>J</b:Middle></b:Person>
+<b:Person><b:Last>Lessard</b:Last><b:First>Mark</b:First><b:Middle>D</b:Middle></b:Person>
+<b:Person><b:Last>Mlodzianoski</b:Last><b:First>Michael</b:First><b:Middle>J</b:Middle></b:Person>
+<b:Person><b:Last>Nagpure</b:Last><b:First>Bhupendra</b:First><b:Middle>S</b:Middle></b:Person>
+<b:Person><b:Last>Bennett</b:Last><b:First>Brian</b:First><b:Middle>T</b:Middle></b:Person>
+<b:Person><b:Last>Hess</b:Last><b:First>Samuel</b:First><b:Middle>T</b:Middle></b:Person>
+<b:Person><b:Last>Bewersdorf</b:Last><b:First>Joerg</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Three-dimensional sub&#8211;100 nm resolution fluorescence microscopy of thick samples</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>descloux2018combined</b:Tag>
@@ -313,13 +432,13 @@
 <b:Person><b:Last>Mahul-Mellier</b:Last><b:First>A.-L.</b:First></b:Person>
 <b:Person><b:Last>Lashuel</b:Last><b:First>H</b:First><b:Middle>A</b:Middle></b:Person>
 <b:Person><b:Last>Leutenegger</b:Last><b:First>M</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Lasser</b:Last><b:First>Theo</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Combined multi-plane phase retrieval and super-resolution optical fluctuation imaging for 4D cell microscopy</b:Title>
 </b:Source>
 <b:Source>
-<b:Tag>shroff2009-phase</b:Tag>
+<b:Tag>shroff2009phase</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Optical Society of America</b:Publisher>
 <b:Year>2009</b:Year>
@@ -355,7 +474,7 @@
 <b:Title>Method of lateral image reconstruction in structured illumination microscopy with super resolution</b:Title>
 </b:Source>
 <b:Source>
-<b:Tag>wicker2013-phase1</b:Tag>
+<b:Tag>wicker2013phase</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Optical Society of America</b:Publisher>
 <b:Year>2013</b:Year>
@@ -375,7 +494,7 @@
 <b:Title>Phase optimisation for structured illumination microscopy</b:Title>
 </b:Source>
 <b:Source>
-<b:Tag>wicker2013-phase2</b:Tag>
+<b:Tag>wicker2013noniterative</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Optical Society of America</b:Publisher>
 <b:Year>2013</b:Year>
@@ -389,24 +508,6 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Non-iterative determination of pattern phase in structured illumination microscopy using auto-correlations in Fourier space</b:Title>
-</b:Source>
-<b:Source>
-<b:Tag>schaefer2004structured</b:Tag>
-<b:SourceType>JournalArticle</b:SourceType>
-<b:Publisher>Wiley Online Library</b:Publisher>
-<b:Year>2004</b:Year>
-<b:JournalName>Journal of microscopy</b:JournalName>
-<b:Volume>216</b:Volume>
-<b:Issue>2</b:Issue>
-<b:Pages>165-174</b:Pages>
-<b:Author>
-<b:Author><b:NameList>
-<b:Person><b:Last>Schaefer</b:Last><b:First>L</b:First><b:Middle>H</b:Middle></b:Person>
-<b:Person><b:Last>Schuster</b:Last><b:First>D</b:First></b:Person>
-<b:Person><b:Last>Schaffer</b:Last><b:First>J</b:First></b:Person>
-</b:NameList></b:Author>
-</b:Author>
-<b:Title>Structured illumination microscopy: artefact analysis and reduction utilizing a parameter optimization approach</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>chu2014image</b:Tag>
@@ -430,6 +531,34 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Image reconstruction for structured-illumination microscopy with low signal level</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>huang2018hessian</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Nature publishing group</b:Publisher>
+<b:Year>2018</b:Year>
+<b:Month>4</b:Month>
+<b:JournalName>Nature Biotechnology</b:JournalName>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Huang</b:Last><b:First>Xiaoshuai</b:First></b:Person>
+<b:Person><b:Last>Fan</b:Last><b:First>Junchao</b:First></b:Person>
+<b:Person><b:Last>Li</b:Last><b:First>Liuju</b:First></b:Person>
+<b:Person><b:Last>Liu</b:Last><b:First>Haosen</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Runlong</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Yi</b:First></b:Person>
+<b:Person><b:Last>Wei</b:Last><b:First>Lisi</b:First></b:Person>
+<b:Person><b:Last>Mao</b:Last><b:First>Heng</b:First></b:Person>
+<b:Person><b:Last>Lal</b:Last><b:First>Amit</b:First></b:Person>
+<b:Person><b:Last>Xi</b:Last><b:First>Peng</b:First></b:Person>
+<b:Person><b:Last>Tang</b:Last><b:First>Liqiang</b:First></b:Person>
+<b:Person><b:Last>Zhang</b:Last><b:First>Yunfeng</b:First></b:Person>
+<b:Person><b:Last>Liu</b:Last><b:First>Yanmei</b:First></b:Person>
+<b:Person><b:Last>Tan</b:Last><b:First>Shan</b:First></b:Person>
+<b:Person><b:Last>Chen</b:Last><b:First>Liangyi</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Fast, long-term, super-resolution imaging with Hessian structured illumination microscopy</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>o2014optimized</b:Tag>
@@ -483,12 +612,68 @@
 <b:Title>Optimal 2D-SIM reconstruction by two filtering steps with Richardson-Lucy deconvolution</b:Title>
 </b:Source>
 <b:Source>
+<b:Tag>schaefer2004structured</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Wiley Online Library</b:Publisher>
+<b:Year>2004</b:Year>
+<b:JournalName>Journal of microscopy</b:JournalName>
+<b:Volume>216</b:Volume>
+<b:Issue>2</b:Issue>
+<b:Pages>165-174</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Schaefer</b:Last><b:First>L</b:First><b:Middle>H</b:Middle></b:Person>
+<b:Person><b:Last>Schuster</b:Last><b:First>D</b:First></b:Person>
+<b:Person><b:Last>Schaffer</b:Last><b:First>J</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Structured illumination microscopy: artefact analysis and reduction utilizing a parameter optimization approach</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>forster2016motion</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Optical Society of America</b:Publisher>
+<b:Year>2016</b:Year>
+<b:JournalName>Optics express</b:JournalName>
+<b:Volume>24</b:Volume>
+<b:Issue>19</b:Issue>
+<b:Pages>22121-22134</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>F&#246;rster</b:Last><b:First>Ronny</b:First></b:Person>
+<b:Person><b:Last>Wicker</b:Last><b:First>Kai</b:First></b:Person>
+<b:Person><b:Last>M&#252;ller</b:Last><b:First>Walter</b:First></b:Person>
+<b:Person><b:Last>Jost</b:Last><b:First>Aur&#233;lie</b:First></b:Person>
+<b:Person><b:Last>Heintzmann</b:Last><b:First>Rainer</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Motion artefact detection in structured illumination microscopy for live cell imaging</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>strohl2017speed</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Optical Society of America</b:Publisher>
+<b:Year>2017</b:Year>
+<b:JournalName>Optics letters</b:JournalName>
+<b:Volume>42</b:Volume>
+<b:Issue>13</b:Issue>
+<b:Pages>2511-2514</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Str&#246;hl</b:Last><b:First>Florian</b:First></b:Person>
+<b:Person><b:Last>Kaminski</b:Last><b:First>Clemens</b:First><b:Middle>F</b:Middle></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Speed limits of structured illumination microscopy</b:Title>
+</b:Source>
+<b:Source>
 <b:Tag>mueller2016open</b:Tag>
 <b:SourceType>JournalArticle</b:SourceType>
 <b:Publisher>Nature Publishing Group</b:Publisher>
 <b:Year>2016</b:Year>
 <b:JournalName>Nature Communications</b:JournalName>
 <b:Volume>7</b:Volume>
+<b:Pages>10980</b:Pages>
 <b:Author>
 <b:Author><b:NameList>
 <b:Person><b:Last>M&#252;ller</b:Last><b:First>Marcel</b:First></b:Person>
@@ -535,7 +720,7 @@
 <b:Person><b:Last>Hagen</b:Last><b:First>Guy</b:First><b:Middle>M</b:Middle></b:Person>
 </b:NameList></b:Author>
 </b:Author>
-<b:Title>SIMToolbox: a MATLAB toolbox for structured illumination fluorescence microscopy</b:Title>
+<b:Title>SIMToolbox: a MATLAB toolbox for&#342; structured illumination fluorescence microscopy</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>ball2015simcheck</b:Tag>
@@ -595,10 +780,30 @@
 <b:Person><b:Last>Rueden</b:Last><b:First>Curtis</b:First></b:Person>
 <b:Person><b:Last>Saalfeld</b:Last><b:First>Stephan</b:First></b:Person>
 <b:Person><b:Last>Schmid</b:Last><b:First>Benjamin</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Tinevez</b:Last><b:First>Jean-Yves</b:First></b:Person>
+<b:Person><b:Last>White</b:Last><b:First>Daniel</b:First><b:Middle>James</b:Middle></b:Person>
+<b:Person><b:Last>Hartenstein</b:Last><b:First>Volker</b:First></b:Person>
+<b:Person><b:Last>Eliceiri</b:Last><b:First>Kevin</b:First></b:Person>
+<b:Person><b:Last>Tomancak</b:Last><b:First>Pavel</b:First></b:Person>
+<b:Person><b:Last>Cardona</b:Last><b:First>Albert</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Fiji: an open-source platform for biological-image analysis</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>arganda2008bunwarpj</b:Tag>
+<b:SourceType>ConferenceProceedings</b:SourceType>
+<b:Year>2008</b:Year>
+<b:ConferenceName>Second ImageJ User &amp; Developer Conference</b:ConferenceName>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Arganda-Carreras</b:Last><b:First>Ignacio</b:First></b:Person>
+<b:Person><b:Last>Sorzano</b:Last><b:First>Carlos</b:First><b:Middle>OS</b:Middle></b:Person>
+<b:Person><b:Last>Kybic</b:Last><b:First>Jan</b:First></b:Person>
+<b:Person><b:Last>Ortiz-de-Solorzano</b:Last><b:First>Carlos</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>bUnwarpj: Consistent and elastic registration in imagej, methods and applications</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>edelstein2014advanced</b:Tag>
@@ -637,6 +842,24 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Computer control of microscopes using &#956;Manager</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>thevenaz1998pyramid</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>IEEE</b:Publisher>
+<b:Year>1998</b:Year>
+<b:JournalName>IEEE transactions on image processing</b:JournalName>
+<b:Volume>7</b:Volume>
+<b:Issue>1</b:Issue>
+<b:Pages>27-41</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Thevenaz</b:Last><b:First>Philippe</b:First></b:Person>
+<b:Person><b:Last>Ruttimann</b:Last><b:First>Urs</b:First><b:Middle>E</b:Middle></b:Person>
+<b:Person><b:Last>Unser</b:Last><b:First>Michael</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>A pyramid approach to subpixel registration based on intensity</b:Title>
 </b:Source>
 <b:Source>
 <b:Tag>henriques2010quickpalm</b:Tag>
@@ -798,7 +1021,11 @@
 <b:Person><b:Last>Beach</b:Last><b:First>Jordan</b:First><b:Middle>R</b:Middle></b:Person>
 <b:Person><b:Last>Hammer</b:Last><b:First>John</b:First><b:Middle>A</b:Middle></b:Person>
 <b:Person><b:Last>Pasham</b:Last><b:First>Mithun</b:First></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Kirchhausen</b:Last><b:First>Tomas</b:First></b:Person>
+<b:Person><b:Last>Baird</b:Last><b:First>Michelle</b:First><b:Middle>A</b:Middle></b:Person>
+<b:Person><b:Last>Davidson</b:Last><b:First>Michael</b:First><b:Middle>W</b:Middle></b:Person>
+<b:Person><b:Last>Xu</b:Last><b:First>Pingyong</b:First></b:Person>
+<b:Person><b:Last>Betzig</b:Last><b:First>Eric</b:First></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Extended-resolution structured illumination imaging of endocytic and cytoskeletal dynamics</b:Title>
@@ -824,7 +1051,8 @@
 <b:Person><b:Last>Cardoso</b:Last><b:First>M</b:First><b:Middle>Cristina</b:Middle></b:Person>
 <b:Person><b:Last>Agard</b:Last><b:First>David</b:First><b:Middle>A</b:Middle></b:Person>
 <b:Person><b:Last>Gustafsson</b:Last><b:First>Mats</b:First><b:Middle>GL</b:Middle></b:Person>
-<b:Person><b:Last>others</b:Last></b:Person>
+<b:Person><b:Last>Leonhardt</b:Last><b:First>Heinrich</b:First></b:Person>
+<b:Person><b:Last>Sedat</b:Last><b:First>John</b:First><b:Middle>W</b:Middle></b:Person>
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Subdiffraction multicolor imaging of the nuclear periphery with 3D structured illumination microscopy</b:Title>
@@ -951,5 +1179,135 @@
 </b:NameList></b:Author>
 </b:Author>
 <b:Title>Imaging fenestrations in liver sinusoidal endothelial cells by optical localization microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>monkemoller2015multimodal</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Year>2015</b:Year>
+<b:JournalName>Scientific Reports</b:JournalName>
+<b:Volume>5</b:Volume>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>M&#246;nkem&#246;ller</b:Last><b:First>Viola</b:First></b:Person>
+<b:Person><b:Last>&#216;ie</b:Last><b:First>Cristina</b:First></b:Person>
+<b:Person><b:Last>H&#252;bner</b:Last><b:First>Wolfgang</b:First></b:Person>
+<b:Person><b:Last>Huser</b:Last><b:First>Thomas</b:First></b:Person>
+<b:Person><b:Last>McCourt</b:Last><b:First>Peter</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Multimodal super-resolution optical microscopy visualizes the close connection between membrane and the cytoskeleton in liver sinusoidal endothelial cell fenestrations</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>muller2010image</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>APS</b:Publisher>
+<b:Year>2010</b:Year>
+<b:JournalName>Physical review letters</b:JournalName>
+<b:Volume>104</b:Volume>
+<b:Issue>19</b:Issue>
+<b:Pages>198101</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>M&#252;ller</b:Last><b:First>Claus</b:First><b:Middle>B</b:Middle></b:Person>
+<b:Person><b:Last>Enderlein</b:Last><b:First>J&#246;rg</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Image scanning microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>gregor2017rapid</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Nature Publishing Group</b:Publisher>
+<b:Year>2017</b:Year>
+<b:JournalName>Nature methods</b:JournalName>
+<b:Volume>14</b:Volume>
+<b:Issue>11</b:Issue>
+<b:Pages>1087</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Gregor</b:Last><b:First>Ingo</b:First></b:Person>
+<b:Person><b:Last>Spiecker</b:Last><b:First>Martin</b:First></b:Person>
+<b:Person><b:Last>Petrovsky</b:Last><b:First>Roman</b:First></b:Person>
+<b:Person><b:Last>Gro&#223;hans</b:Last><b:First>J&#246;rg</b:First></b:Person>
+<b:Person><b:Last>Ros</b:Last><b:First>Robert</b:First></b:Person>
+<b:Person><b:Last>Enderlein</b:Last><b:First>J&#246;rg</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Rapid nonlinear image scanning microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>schulz2013resolution</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>National Acad Sciences</b:Publisher>
+<b:Year>2013</b:Year>
+<b:JournalName>ConferenceProceedings of the National Academy of Sciences</b:JournalName>
+<b:Volume>110</b:Volume>
+<b:Issue>52</b:Issue>
+<b:Pages>21000-21005</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>Schulz</b:Last><b:First>Olaf</b:First></b:Person>
+<b:Person><b:Last>Pieper</b:Last><b:First>Christoph</b:First></b:Person>
+<b:Person><b:Last>Clever</b:Last><b:First>Michaela</b:First></b:Person>
+<b:Person><b:Last>Pfaff</b:Last><b:First>Janine</b:First></b:Person>
+<b:Person><b:Last>Ruhlandt</b:Last><b:First>Aike</b:First></b:Person>
+<b:Person><b:Last>Kehlenbach</b:Last><b:First>Ralph</b:First><b:Middle>H</b:Middle></b:Person>
+<b:Person><b:Last>Wouters</b:Last><b:First>Fred</b:First><b:Middle>S</b:Middle></b:Person>
+<b:Person><b:Last>Gro&#223;hans</b:Last><b:First>J&#246;rg</b:First></b:Person>
+<b:Person><b:Last>Bunt</b:Last><b:First>Gertrude</b:First></b:Person>
+<b:Person><b:Last>Enderlein</b:Last><b:First>J&#246;rg</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Resolution doubling in fluorescence microscopy with confocal spinning-disk image scanning microscopy</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>york2013instant</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Nature Publishing Group</b:Publisher>
+<b:Year>2013</b:Year>
+<b:JournalName>Nature methods</b:JournalName>
+<b:Volume>10</b:Volume>
+<b:Issue>11</b:Issue>
+<b:Pages>1122</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>York</b:Last><b:First>Andrew</b:First><b:Middle>G</b:Middle></b:Person>
+<b:Person><b:Last>Chandris</b:Last><b:First>Panagiotis</b:First></b:Person>
+<b:Person><b:Last>Dalle Nogare</b:Last><b:First>Damian</b:First></b:Person>
+<b:Person><b:Last>Head</b:Last><b:First>Jeffrey</b:First></b:Person>
+<b:Person><b:Last>Wawrzusin</b:Last><b:First>Peter</b:First></b:Person>
+<b:Person><b:Last>Fischer</b:Last><b:First>Robert</b:First><b:Middle>S</b:Middle></b:Person>
+<b:Person><b:Last>Chitnis</b:Last><b:First>Ajay</b:First></b:Person>
+<b:Person><b:Last>Shroff</b:Last><b:First>Hari</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Instant super-resolution imaging in live cells and embryos via analog image processing</b:Title>
+</b:Source>
+<b:Source>
+<b:Tag>guo2018single</b:Tag>
+<b:SourceType>JournalArticle</b:SourceType>
+<b:Publisher>Nature Publishing Group</b:Publisher>
+<b:Year>2018</b:Year>
+<b:Pages>1</b:Pages>
+<b:Author>
+<b:Author><b:NameList>
+<b:Person><b:Last>{Guo</b:Last><b:First>Min</b:First></b:Person>
+<b:Person><b:Last>Chandris</b:Last><b:First>Panagiotis</b:First></b:Person>
+<b:Person><b:Last>Giannini</b:Last><b:First>John</b:First><b:Middle>Paul</b:Middle></b:Person>
+<b:Person><b:Last>Trexler</b:Last><b:First>Adam</b:First><b:Middle>J</b:Middle></b:Person>
+<b:Person><b:Last>Fischer</b:Last><b:First>Robert</b:First></b:Person>
+<b:Person><b:Last>Chen</b:Last><b:First>Jiji</b:First></b:Person>
+<b:Person><b:Last>Vishwasrao</b:Last><b:First>Harshad</b:First><b:Middle>D</b:Middle></b:Person>
+<b:Person><b:Last>Rey-Suarez</b:Last><b:First>Ivan</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Yicong</b:First></b:Person>
+<b:Person><b:Last>Wu</b:Last><b:First>Xufeng</b:First></b:Person>
+<b:Person><b:Last>Waterman</b:Last><b:First>Clare</b:First><b:Middle>M</b:Middle></b:Person>
+<b:Person><b:Last>Patterson</b:Last><b:First>George</b:First><b:Middle>H</b:Middle></b:Person>
+<b:Person><b:Last>Upadhyaya</b:Last><b:First>Arpita</b:First></b:Person>
+<b:Person><b:Last>Taraska</b:Last><b:First>Justin</b:First><b:Middle>W</b:Middle></b:Person>
+<b:Person><b:Last>Shroff</b:Last><b:First>Hari}journal</b:First></b:Person>
+</b:NameList></b:Author>
+</b:Author>
+<b:Title>Single-shot super-resolution total internal reflection fluorescence microscopy</b:Title>
 </b:Source>
 </b:Sources>
